@@ -1,1 +1,2 @@
-# coding-project-template
+#e-plantShopping
+#React based shopping site demo for a plant nursery

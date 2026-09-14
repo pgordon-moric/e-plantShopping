@@ -257,7 +257,7 @@ function ProductList({ onHomeClick }) {
     };
 
     const handleAddToCart = (product) => {
-        dispatchEvent(addItem(product)); //Dispatch the action to add the product to the cart (Redux action)
+        dispatch(addItem(product)); //Dispatch the action to add the product to the cart (Redux action)
         setAddedToCart((prevState) => ({ //Update the local state to reflect that the product has been added
             ...prevState, //Spread the previous state to retain existing entries
             [product.name]: true, //Set the current product's name as a key with 'true' to mark it as added
@@ -304,7 +304,7 @@ function ProductList({ onHomeClick }) {
                             <div className="product-title">{plant.name}</div> {/* Display plant name */}
                             {/* Display other plant details like description and cost */}
                             <div className="product-description">{plant.description}</div> {/* Display plant description */}
-                            <div className="product-cost">${plant.cost}</div> {/* Display plant cost */}
+                            <div className="product-cost">{plant.cost}</div> {/* Display plant cost */}
                             <button
                                 className="product-button"
                                 onClick={() => handleAddToCart(plant)} // Handle adding plant to cart
